@@ -13,33 +13,7 @@
 	<link rel="stylesheet" href="../../build/aui-skin-classic/css/aui-skin-classic-all-min.css" type="text/css" media="screen" />
 
 	<style type="text/css" media="screen">
-		body {
-			font-size: 12px;
-		}
 
-		#wrapper {
-			padding: 10px;
-		}
-
-		.aui-carousel {
-			-webkit-user-select: none;
-			-moz-user-select: none;
-			user-select: none;
-		}
-
-		.aui-carousel-item {
-			-moz-border-radius: 10px;
-			-webkit-border-radius: 10px;
-			border-radius: 10px;
-
-			text-indent: -9999em;
-		}
-
-		#customMenu {
-			position: relative;
-			z-index: 40;
-			background: #ccc;
-		}
 	</style>
 </head>
 
@@ -94,12 +68,16 @@ $theme.include($body_top_include)
 	<h1>Carousel</h1>
 
 	<div id="magnetic">
-		<div style="background: url(http://blogimages.thescore.com/counterattack/files/2011/02/Wayne-Rooney-bicycle-kick-goal1-590x260.jpg) no-repeat; background-size: 100% auto; width: 940px; height: 253px;" class="aui-carousel-item aui-carousel-item-active">Article0</div>
-		<div style="background: url(http://howmanyarethere.net/wp-content/uploads/2012/04/michael-jordan-dunking.jpg) no-repeat; background-size: 100% auto; width: 940px; height: 253px;" class="aui-carousel-item">Article1</div>
-		<div style="background: url(http://download.xbox.com/content/images/66acd000-77fe-1000-9115-d8025454082b/1033/screenlg9.jpg) no-repeat; background-size: 100% auto; width: 940px; height: 253px;" class="aui-carousel-item">Article2</div>
-		<div style="background: url(http://www.freecsstemplates.org/previews/magnetic/images/fotogrph-compass-on-the-roc.jpg) no-repeat; background-size: 100% auto; width: 940px; height: 253px;" class="aui-carousel-item">Article2</div>
-		>
-		
+		<div style="background: url($images_folder/fotogrph-compass-on-the-roc.jpg) no-repeat; background-size: 100% auto; width: 940px; height: 253px;" class="aui-carousel-item aui-carousel-item-active">Article0</div>
+		<div style="background: url($images_folder/chic.jpg) no-repeat; background-size: 100% auto; width: 940px; height: 253px;" class="aui-carousel-item">Article1</div>
+		<div style="background: url($images_folder/kagawa.jpg) no-repeat; background-size: 100% auto; width: 940px; height: 253px;" class="aui-carousel-item">Article2</div>
+		<div style="background: url($images_folder/logo.jpg) no-repeat; background-size: 100% auto; width: 940px; height: 253px;" class="aui-carousel-item">Article3</div>
+		<div style="background: url($images_folder/rooney.jpg) no-repeat; background-size: 100% auto; width: 940px; height: 253px;" class="aui-carousel-item">Article4</div>
+		<div style="background: url($images_folder/rvp.jpg) no-repeat; background-size: 100% auto; width: 940px; height: 253px;" class="aui-carousel-item">Article5</div>
+		<div style="background: url($images_folder/sir_alex.jpg) no-repeat; background-size: 100% auto; width: 940px; height: 253px;" class="aui-carousel-item">Article6</div>
+		<div style="background: url($images_folder/squad.jpg) no-repeat; background-size: 100% auto; width: 940px; height: 253px;" class="aui-carousel-item">Article7</div>
+		<div style="background: url($images_folder/warm_up.jpg) no-repeat; background-size: 100% auto; width: 940px; height: 253px;" class="aui-carousel-item">Article8</div>
+				
 	</div>
 		#if ($selectable)
 			$theme.include($content_include)
@@ -123,17 +101,13 @@ $theme.include($body_bottom_include)
 <script type="text/javascript" charset="utf-8">
 
 AUI().ready('aui-carousel', function(A) {
-
 	var component = new A.Carousel(
 		{
-			intervalTime: 3,
-			contentBox: '#magnetic',
 			activeIndex: 0,
-			// activeIndex: 'rand',
+			contentBox: '#magnetic',
 			height: 254,
+			intervalTime: 3,
 			width: 940
-			// nodeMenu: '#customMenu',
-			// nodeMenuItemSelector: 'li'
 		}
 	).render();
 });

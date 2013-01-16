@@ -7,7 +7,12 @@ nav h1, h2.page-title, #breadcrumbs h1, #skip-to-content, {
 body {
   background-image: url(../images/main-bg.jpg);
   font-family: Georgia, serif;
-  }
+  font-size: 12px;
+}
+
+#wrapper {
+  padding: 10px;
+}
 
 h1.site-title, h2.page-title, body {
   text-align: center;
@@ -19,8 +24,24 @@ h1.site-title, h2.page-title, body {
 
 .aui-carousel {
   margin: 0 auto;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
   width: 30%;
-  }
+}
+
+.aui-carousel-item {
+  border-radius: 10px;
+  text-indent: -9999em;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+#customMenu {
+  background: #ccc;
+  position: relative;
+  z-index: 40;
+}
 
 #navigation {
   ul  {
@@ -51,7 +72,6 @@ h1.site-title, h2.page-title, body {
       text-decoration: none;
     }
 }
-
 
 ul {
   @include border-radius(10px); 
